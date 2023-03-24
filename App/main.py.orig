@@ -2,17 +2,24 @@
 from django.shortcuts import render,redirect
 from . forms import Contact_US_form,Carrier_form
 from django.contrib import messages
-
+# from . task import send_gmail
 from celery import shared_task
 from django.core.mail import send_mail
+from django.views.generic import CreateView
 # Create your views here.
 import time
+import datetime
+
+#this is second comment in this file
 
 def home(request):
       return render(request,"home.html")
 
 def aboutus(request):
       return render(request,"aboutus.html")
+
+
+
 
 def contact_us(request):
       if request.method == "POST":
@@ -64,11 +71,13 @@ def carrers(request):
                   return render(request,"carrers.html", {"form":form})
 
 
-
+<<<<<<< HEAD
 def practice_area(request):
       return render(request,"practice_area.html")
 
 def  ourvision(request):
 	#main.py file changed
 	return render(request, "vision.html")
+=======
 
+>>>>>>> fix
