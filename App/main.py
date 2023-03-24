@@ -2,7 +2,7 @@
 from django.shortcuts import render,redirect
 from . forms import Contact_US_form,Carrier_form
 from django.contrib import messages
-# from . task import send_gmail
+
 from celery import shared_task
 from django.core.mail import send_mail
 from django.views.generic import CreateView
@@ -10,7 +10,7 @@ from django.views.generic import CreateView
 import time
 import datetime
 
-#this is second comment in this file
+
 
 def home(request):
       return render(request,"home.html")
