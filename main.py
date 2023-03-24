@@ -8,9 +8,6 @@ from django.core.mail import send_mail
 
 # Create your views here.
 import time
-import datetime
-
-
 
 def home(request):
       return render(request,"home.html")
